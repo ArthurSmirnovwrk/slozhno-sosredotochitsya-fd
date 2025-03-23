@@ -2,4 +2,118 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--page-font-family), sans-serif;
+  background-color: var(--background-color);
+}
+
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr min-content 1fr;
+  min-block-size: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+}
+
+.decorated-zone:after {
+  content: "";
+  border-top: 1px solid var(--decorated-zone-color);
+  border-right: 1px solid var(--decorated-zone-color);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone:before {
+  content: "";
+  border-bottom: 1px solid var(--decorated-zone-color);
+  border-left: 1px solid var(--decorated-zone-color);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.rec {
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color);
+  font-size: 18px;
+}
+
+.rec::after {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding-bottom: 3px;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--accent-color);
+  background-color: transparent;
+  min-inline-size: 70px;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--theme-menu-hover);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header__text {
+  color: var(--header-text-color);
+  font-weight: 700;
+  font-size: var(--header-text-size);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 83%;
+}
+
+.header__title {
+  color: var(--header-title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  background-color: var(--accent-color);
+  line-height: 23.4px;
+  height: max-content;
+}
+
+.block {
+
 }
