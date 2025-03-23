@@ -15,6 +15,7 @@
   background-position: center;
   background-size: cover;
   padding: 10px;
+  min-height: 668px;
 }
 
 .decorated-zone:after {
@@ -105,15 +106,61 @@
   line-height: 83%;
 }
 
-.header__title {
+.title__decoration {
   color: var(--header-title-text-color);
-  font-weight: 700;
-  font-size: 18px;
   background-color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 700;
   line-height: 23.4px;
   height: max-content;
 }
 
-.block {
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 50px;
+  padding: 40px 10px;
+}
 
+.title {
+  color: var(--block-title-color);
+  font-size: 18px;
+}
+
+.additional__padding {
+  padding-top: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 10px;
+}
+
+.card__description {
+  color: var(--card-description-color);
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.font__thin {
+  font-weight: 400;
+}
+
+.pictures {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 668px;
 }

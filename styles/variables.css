@@ -11,6 +11,8 @@
   --header-text-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --theme-menu-hover: #FF007066;
   --decorated-zone-color: #FF0070;
+  --block-title-color: #FF0070;
+  --card-description-color: #F1B2CE;
 
 
 }
