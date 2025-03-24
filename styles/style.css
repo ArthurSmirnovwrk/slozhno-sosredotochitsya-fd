@@ -4,6 +4,11 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   font-family: var(--page-font-family), sans-serif;
   background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
@@ -11,9 +16,6 @@
   align-items: center;
   grid-template-rows: 1fr min-content 1fr;
   min-block-size: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   padding: 10px;
   min-height: 668px;
 }

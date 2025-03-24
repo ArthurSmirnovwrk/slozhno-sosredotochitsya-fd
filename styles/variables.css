@@ -5,6 +5,7 @@
 :root {
   --page-font-family: 'IBM Plex Mono';
   --background-color: #000028;
+  --background-image: url("/images/cover-image-dark.png");
   --header-text-color: #DB00FF;
   --header-title-text-color: #000028;
   --accent-color: #FF0070;
