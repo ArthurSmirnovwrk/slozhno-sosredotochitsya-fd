@@ -53,6 +53,7 @@
   gap: 10px;
   color: var(--accent-color);
   font-size: 18px;
+  visibility: var(--visibility-rec);
 }
 
 .rec::after {
@@ -79,7 +80,7 @@
   line-height: 18px;
   text-transform: lowercase;
   text-align: center;
-  color: var(--accent-color);
+  color: var(--decorated-zone-color);
   background-color: transparent;
   min-inline-size: 70px;
 }
@@ -89,7 +90,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--decorated-zone-color);
 }
 
 .header__theme-menu-button:hover {
@@ -97,7 +98,7 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--decorated-zone-color);
   pointer-events: none;
 }
 
