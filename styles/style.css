@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  font-family: var(--page-font-family), sans-serif;
+  font-family: var(--page-font-family), monospace;
   background-color: var(--background-color);
   background-image: var(--background-image);
   background-repeat: no-repeat;
@@ -83,6 +83,7 @@
   color: var(--decorated-zone-color);
   background-color: transparent;
   min-inline-size: 70px;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus {
@@ -102,8 +103,8 @@
   pointer-events: none;
 }
 
-.header__text {
-  color: var(--header-text-color);
+.focus__text {
+  color: var(--focus-text-color);
   font-weight: 700;
   font-size: var(--header-text-size);
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -158,7 +159,7 @@
 }
 
 .link:hover {
-  border-bottom: 1px solid var(--card-description-color);
+  border-bottom: 1px solid currentColor;
 }
 
 .link:focus {
@@ -187,10 +188,6 @@
   justify-content: center;
   align-items: center;
   min-height: 668px;
-}
-
-.footer_text {
-  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (width >= 768px) {
@@ -225,7 +222,7 @@
     margin-block-end: 173px;
   }
 
-  .header__text {
+  .focus__text {
     margin-left: -20px;
   }
 
@@ -241,7 +238,8 @@
   }
 
   .title {
-    width: 236px;
+    max-width: 236px;
+    width: 100%;
   }
 
   .stretched {
@@ -270,47 +268,31 @@
     padding-block-start: 20px;
   }
 
-  .picture:nth-child(1) {
-    grid-column: span 2;
+  .picture {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
+  }
+
+  .picture:nth-child(1) {
+    grid-column: span 2;
   }
 
   .picture:nth-child(2) {
     grid-row: span 2;
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
   }
 
   .picture:nth-child(3) {
     grid-row: span 2;
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-  }
-
-  .picture:nth-child(4) {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
   }
 
   .picture:nth-child(5) {
     grid-column: span 2;
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
   }
 
   .footer_text {
-    text-shadow: 2px 2px 0 var(--accent-color);
+    padding-left: 20px;
   }
 }
 
@@ -330,7 +312,8 @@
   }
 
   .title {
-    width: 315px;
+    max-width: 315px;
+    width: 100%;
   }
 
   .block {
@@ -342,8 +325,5 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .footer_text {
-    text-shadow: 2px 2px 0 var(--accent-color);
-    padding-left: 20px;
-  }
+  
 }
